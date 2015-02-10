@@ -3,7 +3,9 @@ source ~/.git-completion-full.bash
 PS1='[\H \W$(__git_ps1 " (%s)")]\$ '
 
 # some data sources
-source ~/.data_sources
+if [ -f ~/.data_sources ]; then
+    source ~/.data_sources
+fi
 
 # bash completion (?)
 if [ -f `brew --prefix`/etc/bash_completion ]; then
