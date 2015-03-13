@@ -25,6 +25,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 command Nerd NERDTree
 "disable the arrows that don't work
 let g:NERDTreeDirArrows=0
+" have nerdtree show hidden files
+let NERDTreeShowHidden=1
+" sort dotfiles first in directories
+let NERDTreeSortHiddenFirst=1
 
 au FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -78,7 +82,10 @@ au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.conf set shiftwidth=2
 au BufRead,BufNewFile *.py,*.pyw set expandtab
 
-autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+"autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
+" For python files, automatically strip off trailing whitespace (and lines that are solely
+" whitespace) when saving
+autocmd BufWritePre *.py silent! :%s/\s\+$//
 
 "nice status bar at bottom with current/total lines, column, percent of doc
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
@@ -125,7 +132,8 @@ nnoremap <leader>np :set nopaste<CR>
 set hlsearch
 nnoremap <leader>k :nohlsearch<CR>
 
-nnoremap <leader>c <leader>c<space>
+" not sure this does anything...
+"nnoremap <leader>c <leader>c<space>
 
 " Folding set up 
 set foldmethod=indent
