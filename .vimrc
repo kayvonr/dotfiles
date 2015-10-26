@@ -38,6 +38,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType pyrex set expandtab shiftwidth=4 softtabstop=4 autoindent 
+autocmd FileType json set expandtab shiftwidth=4 softtabstop=4 autoindent 
 autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent 
 
 let g:SuperTabDefaultCompletionType = "context"
