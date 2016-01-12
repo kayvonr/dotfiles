@@ -39,6 +39,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType pyrex set expandtab shiftwidth=4 softtabstop=4 autoindent 
 autocmd FileType json set expandtab shiftwidth=4 softtabstop=4 autoindent 
+autocmd FileType yaml set expandtab shiftwidth=2 softtabstop=2 autoindent 
 autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent 
 
 let g:SuperTabDefaultCompletionType = "context"
@@ -86,7 +87,7 @@ au BufRead,BufNewFile *.py,*.pyw set expandtab
 "autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 " For python files, automatically strip off trailing whitespace (and lines that are solely
 " whitespace) when saving
-autocmd BufWritePre *.py silent! :%s/\s\+$//
+" autocmd BufWritePre *.py silent! :%s/\s\+$//
 
 "nice status bar at bottom with current/total lines, column, percent of doc
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
