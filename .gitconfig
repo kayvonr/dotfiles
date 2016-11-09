@@ -1,5 +1,4 @@
 [core]
-    #excludesfile = /home/kraphael/git_stuff/optimization/.gitignore
     pager = less -+$LESS -R
 	excludesfile = /Users/kraphael/.gitignore_global
 [alias]
@@ -10,5 +9,5 @@
 [color]
     ui = auto
 [user]
-	name = Kayvon Raphael
-	email = kayvon2@gmail.com
+	name = NAME
+	email = EMAIL
