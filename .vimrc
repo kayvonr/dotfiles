@@ -43,7 +43,9 @@ autocmd FileType yaml set expandtab shiftwidth=2 softtabstop=2 autoindent
 autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent 
 
 let g:SuperTabDefaultCompletionType = "context"
-set completeopt=menuone,longest,preview
+set completeopt=menuone,longest
+set completeopt-=preview
+autocmd FileType python setlocal completeopt-=preview
 
 
 "Set the leader and change exit from esc to jj 
