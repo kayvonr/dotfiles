@@ -6,6 +6,7 @@
     st = status
     co = checkout
     bdiff = log --graph --left-right --cherry-pick --oneline
+    pom = git push origin master
 [color]
     ui = auto
 [user]
