@@ -10,6 +10,8 @@ syntax enable
 set scrolloff=80
 "relative numbering
 set relativenumber
+" also set absolute, which just shows current line's absolute number
+set number
 "if you print from vim: single sided, 14pt margins, with line numbers
 set printoptions=duplex:off,left:14pt,number:y
 "start searching while typing
