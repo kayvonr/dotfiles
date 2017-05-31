@@ -1,4 +1,5 @@
 # git repo in prompt
+source ~/.git-completion.bash
 source ~/.git-completion-full.bash
 PS1='[\H \W$(__git_ps1 " (%s)")]\$ '
 
@@ -49,6 +50,10 @@ cdd() {
     ls 
 }
 
+clear_ssh_entry() {
+    sed -i -e ${1}d ~/.ssh/known_hosts 
+}
+
 
 #don't log back-to-back duplicate commands in bash history
 export HISTCONTROL=ignoredups
@@ -84,14 +89,11 @@ alias htop="/usr/local/Cellar/htop-osx/0.8.2.2/bin/htop"
 
 
 # woohoo java development
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # le scalas
 export SCALA_HOME=/usr/local/share/scala
 export PATH=$PATH:$SCALA_HOME/bin
-
-# get to the amazon shit
-alias go_aws="ssh -i ~/Documents/yh_docs/creds/amazon_prod.pem "
 
 # some tmux stuff
 export TERM="screen-256color"
