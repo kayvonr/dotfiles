@@ -22,7 +22,7 @@ colorscheme solarized
 let g:solarized_termcolors=16
 
 "close vim if only NERDTree window left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "shortcut to turn on NERDTree
 command Nerd NERDTree
 "disable the arrows that don't work
