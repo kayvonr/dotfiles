@@ -1,7 +1,7 @@
 # git repo in prompt
 source ~/.git-completion.bash
 source ~/.git-completion-full.bash
-PS1='[\H \W$(__git_ps1 " (%s)")]\$ '
+PS1='\W$(__git_ps1 " (%s)") \$ '
 
 # some data sources
 if [ -f ~/.data_sources ]; then
@@ -50,7 +50,7 @@ cdd() {
     ls 
 }
 
-clear_ssh_entry() {
+delete_ssh_entry() {
     sed -i -e ${1}d ~/.ssh/known_hosts 
 }
 
@@ -58,8 +58,8 @@ clear_ssh_entry() {
 #don't log back-to-back duplicate commands in bash history
 export HISTCONTROL=ignoredups
 # really long history
-export HISTSIZE=100000
-export HISTFILESIZE=100000
+export HISTSIZE=500000
+export HISTFILESIZE=5000000
 
 # colored ls
 export CLICOLOR=1
@@ -72,21 +72,13 @@ export EDITOR=vim
 alias vi=vim
 alias emacs=vim
 
-# To find ack (mainly)
-export PATH=~/bin:$PATH
+# non-mac python setup
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 # Find yh-python modules
 #export PYTHONPATH=/Users/kraphael/src/link:$PYTHONPATH
 export PYTHONPATH=/Users/kraphael/src/yh-python:$PYTHONPATH
 export PYTHONPATH=/Users/kraphael/src/python_scripts:$PYTHONPATH
-
-# added by Anaconda 2.0.1 installer
-export PATH="/Users/kraphael/anaconda/bin:$PATH"
-
-
-# GAH BREW AND ITS PERMISSIONS
-alias htop="/usr/local/Cellar/htop-osx/0.8.2.2/bin/htop"
-
 
 # woohoo java development
 export JAVA_HOME=$(/usr/libexec/java_home)
