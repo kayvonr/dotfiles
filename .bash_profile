@@ -90,3 +90,6 @@ export PATH=$PATH:$SCALA_HOME/bin
 # some tmux stuff
 export TERM="screen-256color"
 alias tmux="tmux -2"
+
+# git history into vim for man-page commit content
+alias show-me-the-money="git log  --graph --pretty=format:'%h -%d% %s (%ci - %cr) <%an>' --abbrev-commit | vi -R -c 'set filetype=git' -"
