@@ -41,8 +41,10 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType pyrex set expandtab shiftwidth=4 softtabstop=4 autoindent 
 autocmd FileType json set expandtab shiftwidth=4 softtabstop=4 autoindent 
+autocmd FileType text set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
 autocmd FileType yaml set expandtab shiftwidth=2 softtabstop=2 autoindent 
 autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent 
+autocmd FileType sh set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
 
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest
