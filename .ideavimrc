@@ -1,0 +1,124 @@
+filetype plugin indent on
+
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim 
+syntax enable
+
+"keep the cursor in the middle of the page
+set scrolloff=80
+"relative numbering
+set relativenumber
+" also set absolute, which just shows current line's absolute number
+set number
+"start searching while typing
+set incsearch
+
+au FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+au FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType pyrex set expandtab shiftwidth=4 softtabstop=4 autoindent 
+autocmd FileType json set expandtab shiftwidth=4 softtabstop=4 autoindent 
+autocmd FileType text set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
+autocmd FileType yaml set expandtab shiftwidth=2 softtabstop=2 autoindent 
+autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent 
+autocmd FileType sh set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
+
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest
+set completeopt-=preview
+autocmd FileType python setlocal completeopt-=preview
+
+
+"Set the leader and change exit from esc to jj 
+let mapleader = ","
+inoremap jj <ESC>
+
+set backspace=indent,eol,start
+set nocompatible
+set ignorecase
+set autoindent
+set copyindent
+set smartcase
+set viminfo='10,\"100,:20,%,n~/.viminfo
+set textwidth=90
+set softtabstop=4
+set tabstop=4
+set expandtab
+set smarttab
+
+autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufNewFile,BufRead *.conf set ft=javascript
+autocmd BufNewFile,BufRead *.config set ft=javascript
+
+au! BufRead,BufNewFile *.json setfiletype json 
+au! BufRead,BufNewFile *.conf setfiletype json 
+au! BufRead,BufNewFile *.config setfiletype json 
+
+au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.conf set shiftwidth=2
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+
+"nice status bar at bottom with current/total lines, column, percent of doc
+set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+:set laststatus=2
+
+nmap <silent> <C-f> :CommandTFlush<CR>
+nmap <C-k> D
+nmap <C-y> p
+
+"semi-colon is a colon
+nnoremap ; :
+
+"Disable the arrows to force me to learn
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+nnoremap t l
+xnoremap t l
+
+"Saving and quiting short-cuts
+nnoremap <leader>w :w<CR>
+nnoremap <leader>wq :wq<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>qq :q!<CR>
+
+"shortcuts for paste 'mode'
+nnoremap <leader>p :set paste<CR>
+nnoremap <leader>np :set nopaste<CR>
+
+"hl search highlights as you search
+set hlsearch
+nnoremap <leader>k :nohlsearch<CR>
+
+nnoremap <leader>f :CommandTFlush<CR>
+" remap the nerdcommenter toggle to just leader c
+nnoremap <leader>a :Ack
+nnoremap <F5> :GundoToggle<CR>
+
+"Easier splits navigation - Remapped Caps Lock to Control
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-t> <C-w>l
+nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>d <C-w>-
+nnoremap <leader>< <C-w><
+nnoremap <leader>> <C-w>>
+nnoremap <leader>k <C-w>+
+nnoremap <leader>h :split<CR>
+
+
+let g:jedi#popup_on_dot = 0
+
+command! Despace :%s/\s\+$//
+set ideajoin
+set visualbell
+set noerrorbells
