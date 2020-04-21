@@ -1,6 +1,6 @@
 "load everything from pathogen
-filetype off
 execute pathogen#infect()
+syntax on
 filetype plugin indent on
 
 autocmd FileType python set complete+=k~/.vim/syntax/python.vim 
@@ -18,7 +18,7 @@ set printoptions=duplex:off,left:14pt,number:y
 set incsearch
 
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 let g:solarized_termcolors=16
 
 "close vim if only NERDTree window left open
@@ -70,10 +70,6 @@ set tabstop=4
 set expandtab
 set smarttab
 
-
-"Highlights any line over 90chars in green
-"highlight OverLength ctermbg=green ctermfg=white guibg=#592929
-"match OverLength /\%81v.\+/
 "puts a red column at XXchars
 set colorcolumn=90
 
@@ -90,11 +86,6 @@ au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
 au BufRead,BufNewFile *.conf set shiftwidth=2
 au BufRead,BufNewFile *.py,*.pyw set expandtab
 
-"autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
-" For python files, automatically strip off trailing whitespace (and lines that are solely
-" whitespace) when saving
-" autocmd BufWritePre *.py silent! :%s/\s\+$//
-
 "nice status bar at bottom with current/total lines, column, percent of doc
 set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
 :set laststatus=2
@@ -106,12 +97,6 @@ nmap <C-y> p
 "semi-colon is a colon
 nnoremap ; :
 
-"Carriage Return to toggle between files in window
-"nnoremap <CR> :wa<CR><C-^>
-
-"reformats and saves json file if you have json_reformat installed
-map <leader>j <Esc>:%!json_reformat <CR>
-
 "Disable the arrows to force me to learn
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -121,10 +106,6 @@ nnoremap j gj
 nnoremap k gk
 nnoremap t l
 xnoremap t l
-"nnoremap dt d
-
-"delete a word and insert
-"nnoremap di dwi
 
 "Saving and quiting short-cuts
 nnoremap <leader>w :w<CR>
@@ -140,18 +121,11 @@ nnoremap <leader>np :set nopaste<CR>
 set hlsearch
 nnoremap <leader>k :nohlsearch<CR>
 
-" not sure this does anything...
-"nnoremap <leader>c <leader>c<space>
-
 " Folding set up 
 set foldmethod=indent
 set nofoldenable
 nnoremap <leader>l zR
 nnoremap <leader>m zM
-
-" Execute file being edited with <Shift> + e:
-nnoremap <S-e> :w<CR>:!/opt/py27/bin/python %:p
-nnoremap <S-e>v :w<CR>:!/opt/py27/bin/python %:p --verbose
 
 nnoremap <leader>f :CommandTFlush<CR>
 " remap the nerdcommenter toggle to just leader c
