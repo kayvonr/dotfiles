@@ -80,13 +80,6 @@ export PATH=/usr/local/opt/python/libexec/bin:$PATH
 export PYTHONPATH=/Users/kraphael/src/yh-python:$PYTHONPATH
 export PYTHONPATH=/Users/kraphael/src/python_scripts:$PYTHONPATH
 
-# woohoo java development
-export JAVA_HOME=$(/usr/libexec/java_home)
-
-# le scalas
-export SCALA_HOME=/usr/local/share/scala
-export PATH=$PATH:$SCALA_HOME/bin
-
 # some tmux stuff
 export TERM="screen-256color"
 alias tmux="tmux -2"
@@ -96,3 +89,5 @@ alias show-me-the-money="git log  --graph --pretty=format:'%h -%d% %s (%ci - %cr
 overwrite-branch() {
     git push origin $(git symbolic-ref --short HEAD):$1 --force
 }
+# as of OS X catalina apple shows a deprecation warning for bash
+export BASH_SILENCE_DEPRECATION_WARNING=1

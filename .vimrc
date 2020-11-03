@@ -1,5 +1,5 @@
 "load everything from pathogen
-execute pathogen#infect()
+"execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
