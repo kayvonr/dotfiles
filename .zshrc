@@ -99,5 +99,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+# non-mac python setup
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
 # openjdk java install
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
