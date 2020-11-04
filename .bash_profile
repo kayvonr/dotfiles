@@ -75,11 +75,6 @@ alias emacs=vim
 # non-mac python setup
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
-# Find yh-python modules
-#export PYTHONPATH=/Users/kraphael/src/link:$PYTHONPATH
-export PYTHONPATH=/Users/kraphael/src/yh-python:$PYTHONPATH
-export PYTHONPATH=/Users/kraphael/src/python_scripts:$PYTHONPATH
-
 # some tmux stuff
 export TERM="screen-256color"
 alias tmux="tmux -2"
