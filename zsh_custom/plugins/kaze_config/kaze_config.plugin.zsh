@@ -29,3 +29,15 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 # some tmux stuff
 export TERM="screen-256color"
 alias tmux="tmux -2"
+
+## word manipulation
+# set word characters so e.g. ctrl+w works like bash (back to space)
+WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
+
+# set custom behavior for alt+delete bash-style to slash
+backward-kill-dir () {
+    local WORDCHARS=${WORDCHARS/\/}
+    zle backward-kill-word
+}
+zle -N backward-kill-dir
+bindkey '^[^?' backward-kill-dir
