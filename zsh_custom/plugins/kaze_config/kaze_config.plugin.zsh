@@ -37,6 +37,7 @@ WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>'
 # set custom behavior for alt+delete bash-style to slash
 backward-kill-dir () {
     local WORDCHARS=${WORDCHARS/\/}
+    local WORDCHARS=${WORDCHARS//\_\-}
     zle backward-kill-word
 }
 zle -N backward-kill-dir
