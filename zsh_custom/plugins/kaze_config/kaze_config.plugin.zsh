@@ -42,3 +42,5 @@ backward-kill-dir () {
 }
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
+
+bindkey \^U backward-kill-line
