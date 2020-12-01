@@ -1,0 +1,16 @@
+[prtscr]>[play]
+[scroll]>[vol-]
+[pause]>[vol+]
+[caps]>[lctrl]
+[lctrl]>[lalt]
+[lalt]>[lwin]
+[rwin]>[rctrl]
+[rctrl]>[rwin]
+[delete]>[lwin]
+{home}>{speed5}{-lwin}{left}{+lwin}
+[pup]>[lctrl]
+{end}>{speed5}{-lwin}{right}{+lwin}
+[pdown]>[lalt]
+[kp-lctrl]>[lwin]
+[kp-rwin]>[rctrl]
+[kp-rctrl]>[rwin]
