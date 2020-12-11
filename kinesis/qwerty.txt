@@ -1,3 +1,5 @@
+[F9]>[obrack]
+[F10]>[cbrack]
 [prtscr]>[play]
 [scroll]>[vol-]
 [pause]>[vol+]
@@ -9,8 +11,11 @@
 [delete]>[lwin]
 {home}>{speed5}{-lwin}{left}{+lwin}
 [pup]>[lctrl]
+[`]>[null]
+[intl-\]>[`]
 {end}>{speed5}{-lwin}{right}{+lwin}
 [pdown]>[lalt]
 [kp-lctrl]>[lwin]
 [kp-rwin]>[rctrl]
 [kp-rctrl]>[rwin]
+[kp-pup]>[kptoggle]
