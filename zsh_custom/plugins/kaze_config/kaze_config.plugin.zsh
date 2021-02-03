@@ -54,6 +54,7 @@ backward-kill-dir () {
     local WORDCHARS=${WORDCHARS/\/}
     local WORDCHARS=${WORDCHARS/\.}
     local WORDCHARS=${WORDCHARS//\_\-}
+    local WORDCHARS=${WORDCHARS//\*}
     zle backward-kill-word
 }
 # bind to alt+backspace
