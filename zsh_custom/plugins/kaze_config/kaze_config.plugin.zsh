@@ -47,7 +47,7 @@ alias tmux="tmux -2"
 ### terminal word manipulation
 
 # set word characters so e.g. ctrl+w works like bash (back to space)
-WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>:"'
+WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>:"@'\'''
 
 # set custom behavior for alt+delete bash-style to delete back to slash/dot/dash/underscore
 backward-kill-dir () {
