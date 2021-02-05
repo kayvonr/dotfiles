@@ -1,6 +1,10 @@
 # Add your own custom plugins in the custom/plugins directory. Plugins placed
 # here will override ones with the same name in the main plugins directory.
 
+## NOTE: update the robbyrussell prompt:
+# append %{$fg[cyan]%}%B$%b%{$reset_color%} to second line, ie:
+# PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)%{$fg[cyan]%}%B$%b%{$reset_color%} '
+
 ### shell / terminal conveniences
 
 # cd + ls in one command
