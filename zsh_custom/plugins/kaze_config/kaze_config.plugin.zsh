@@ -19,6 +19,9 @@ psaux(){
     ps aux | gsed -n "1p; /"$1"/Ip;"
 }
 
+ifind() {
+    find . -iname "*$1*"
+}
 
 ### git shortcuts
 
