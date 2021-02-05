@@ -1,6 +1,6 @@
 [core]
     pager = less -+$LESS -R
-	excludesfile = /Users/kraphael/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci - %cr) %C(blue)<%an>%Creset' --abbrev-commit
     st = status
