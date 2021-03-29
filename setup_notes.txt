@@ -1,0 +1,9 @@
+* install ohmyzsh
+* copy:
+    * zshrc
+    * gitconfig
+* symlink:
+    * vimrc
+    * ideavimrc
+    * tmux conf
+    * gitignore global
