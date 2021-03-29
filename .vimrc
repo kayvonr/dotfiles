@@ -16,7 +16,7 @@ set printoptions=duplex:off,left:14pt,number:y
 set incsearch
 
 set background=dark
-colorscheme solarized8
+"colorscheme solarized8
 let g:solarized_termcolors=16
 
 "close vim if only NERDTree window left open
