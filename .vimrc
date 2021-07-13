@@ -44,6 +44,7 @@ autocmd FileType yaml set expandtab shiftwidth=2 softtabstop=2 autoindent
 autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent textwidth=120
 autocmd FileType sh set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
 autocmd FileType sql set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
+autocmd FileType markdown set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
 
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest
