@@ -30,18 +30,18 @@ let NERDTreeShowHidden=1
 " sort dotfiles first in directories
 let NERDTreeSortHiddenFirst=1
 
-au FileType python set omnifunc=pythoncomplete#Complete textwidth=90
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS textwidth=90
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags textwidth=90
-au FileType css set omnifunc=csscomplete#CompleteCSS textwidth=90
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags textwidth=90
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP textwidth=90
-autocmd FileType c set omnifunc=ccomplete#Complete textwidth=90
-autocmd FileType pyrex set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=90
+au FileType python set omnifunc=pythoncomplete#Complete textwidth=120
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS expandtab shiftwidth=2 softtabstop=2 autoindent textwidth=120
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags textwidth=120
+au FileType css set omnifunc=csscomplete#CompleteCSS textwidth=120
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags textwidth=120
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP textwidth=120
+autocmd FileType c set omnifunc=ccomplete#Complete textwidth=120
+autocmd FileType pyrex set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=120
 autocmd FileType json set expandtab shiftwidth=4 softtabstop=4 autoindent
 autocmd FileType text set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
 autocmd FileType yaml set expandtab shiftwidth=2 softtabstop=2 autoindent
-autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent textwidth=90
+autocmd FileType ruby set expandtab shiftwidth=2 softtabstop=2 autoindent textwidth=120
 autocmd FileType sh set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
 autocmd FileType sql set expandtab shiftwidth=4 softtabstop=4 autoindent textwidth=0
 
@@ -63,14 +63,14 @@ set autoindent
 set copyindent
 set smartcase
 set viminfo='10,\"100,:20,%,n~/.viminfo
-"set textwidth=90
+"set textwidth=120
 set softtabstop=4
 set tabstop=4
 set expandtab
 set smarttab
 
 "puts a red column at XXchars
-set colorcolumn=90
+set colorcolumn=120
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.conf set ft=javascript
