@@ -12,3 +12,5 @@
 [user]
 	name = NAME
 	email = EMAIL
+[push]
+    autoSetupRemote = true
