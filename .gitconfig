@@ -7,6 +7,8 @@
     co = checkout
     bdiff = log --graph --left-right --cherry-pick --oneline
     pom = push origin HEAD
+    update-remote = remote set-url origin
+    tracked = ls-files --error-unmatch
 [color]
     ui = auto
 [user]
