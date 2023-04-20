@@ -75,5 +75,9 @@ bindkey '^[^?' backward-kill-dir
 # ctrl+u delete from cursor to front of line
 bindkey \^U backward-kill-line
 
-alias docker-stopall="docker stop $(docker ps -aq)"
-alias docker-killall="docker stop $(docker ps -aq) && docker rm $(docker ps -aq)"
+function docker-stopall() {
+    docker stop $(docker ps -aq)
+}
+function docker-killall() {
+    docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
+}
