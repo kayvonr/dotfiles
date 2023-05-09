@@ -149,3 +149,6 @@ nnoremap <leader>h :split<CR>
 let g:jedi#popup_on_dot = 0
 
 command! Despace :%s/\s\+$//
+
+" show X/Y search result info
+set shortmess-=S
