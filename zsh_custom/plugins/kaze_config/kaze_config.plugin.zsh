@@ -69,6 +69,7 @@ backward-kill-dir () {
     zle backward-kill-word
 }
 # bind to alt+backspace
+# NOTE TO SELF: iterm settings must have the option keys mapped to esc+ for this to work
 zle -N backward-kill-dir
 bindkey '^[^?' backward-kill-dir
 
