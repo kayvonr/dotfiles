@@ -10,3 +10,6 @@
 *.terraform.lock.hcl
 
 kr_test/
+
+# intellij
+.idea

@@ -1,4 +1,5 @@
 shortcuts that are useful
     * command + . -> toggle folding of section that cursor is in (if folded then unfold, if unfolded then fold)
     * shift + command + G -> copy github url of line
+    * command + shift + B -> toggle git blame
 
