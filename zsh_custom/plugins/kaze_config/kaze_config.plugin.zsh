@@ -82,3 +82,6 @@ function docker-stopall() {
 function docker-killall() {
     docker stop $(docker ps -aq) && docker rm $(docker ps -aq)
 }
+
+# disable ctrl+d from exiting a shell session
+setopt ignoreeof
