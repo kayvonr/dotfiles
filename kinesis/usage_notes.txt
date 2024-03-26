@@ -1,0 +1,18 @@
+General process to use the smartset app:
+* Enable power user mode: Program + Shift + Esc (4 blinks on, 2 blinks off)
+* Mount the v-drive: Program + F1 (same re: blinks)
+* Open smartset app
+* Make changes or load the layout from this repo
+* close the smartset app
+* eject (via OS) the kinesis drive
+    * Note: sometimes it mounts back automatically. if so, do the next step quickly after this one, before it mounts back
+* close v-drive via keyboard: Program + F1
+* disable power user mode: Program + Shift + Esc
+
+If I've bricked the keyboard again (from the email from Kinesis Support 2020-11-30):
+* Do a self-format command: Program + Shift + Ctrl + F
+    * Note that by default ctrl is mapped to either the top-left or top-right button on right-side thumb cluster
+* Enable power user mode: Program + Shift + Esc
+* Mount the v-drive: Program + F1
+* Rename the drive to "Kinesis KB"
+* Run app as normal
