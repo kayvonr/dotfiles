@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+from pprint import pp
+from argparse import ArgumentParser
+
+from avro.io import DatumReader
+from avro.datafile import DataFileReader
+
+
+def _parse_args():
+    parser = ArgumentParser()
+
+    parser.add_argument("avro_file")
+
+    return parser.parse_args()
+
+
+def run(avro_file):
+    with open(avro_file, 'rb') as fh:
+        reader = DataFileReader(fh, DatumReader())
+        for entry in reader:
+            pp(entry)
+
+
+if __name__ == "__main__":
+    _args = _parse_args()
+    run(_args.avro_file)
