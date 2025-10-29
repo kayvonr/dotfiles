@@ -97,10 +97,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
+alias gw="./gradlew"
+alias mw="./mvnw"
 
 # non-mac python setup
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+# export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 # openjdk java install
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
+# export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
