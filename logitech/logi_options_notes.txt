@@ -1,0 +1,11 @@
+* settings.db is the settings file for the entire logi options+ app
+* if that doesn't work, here are the notes about how devices are configured
+* mx master
+    * buttons
+        * thumb button: back
+        * top button: do nothing
+    * point and scroll
+        * scroll wheel
+            * speed: 50%
+            * smooth scrolling + smartshift: off
+        * pointer speed: 65%
