@@ -153,3 +153,10 @@ command! Despace :%s/\s\+$//
 
 " show X/Y search result info
 set shortmess-=S
+
+" use vim-plug for plugin management
+call plug#begin()
+
+Plug 'ctrlpvim/ctrlp.vim'
+
+call plug#end()
