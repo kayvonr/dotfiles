@@ -14,3 +14,6 @@ KraphaelTest*
 
 # intellij
 .idea
+
+# claude
+.claude/worktrees/
