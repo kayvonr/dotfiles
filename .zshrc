@@ -106,3 +106,14 @@ alias mw="./mvnw"
 # openjdk java install
 # export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+
+export PAGER="LESS -XFR"
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+# not sure what this is doing
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# uv (python package management)
+export PATH="/Users/kraphael/.local/bin:$PATH"
