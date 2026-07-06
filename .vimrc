@@ -15,10 +15,6 @@ set printoptions=duplex:off,left:14pt,number:y
 "start searching while typing
 set incsearch
 
-set background=dark
-"colorscheme solarized8
-let g:solarized_termcolors=16
-
 "close vim if only NERDTree window left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "shortcut to turn on NERDTree
@@ -158,5 +154,10 @@ set shortmess-=S
 call plug#begin()
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
+
+set background=dark
+colorscheme solarized
+"let g:solarized_termcolors=16
