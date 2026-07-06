@@ -71,12 +71,12 @@ set smarttab
 set colorcolumn=120
 
 autocmd BufNewFile,BufRead *.json set ft=javascript
-autocmd BufNewFile,BufRead *.conf set ft=javascript
-autocmd BufNewFile,BufRead *.config set ft=javascript
+"autocmd BufNewFile,BufRead *.conf set ft=javascript
+"autocmd BufNewFile,BufRead *.config set ft=javascript
 
 au! BufRead,BufNewFile *.json setfiletype json 
-au! BufRead,BufNewFile *.conf setfiletype json 
-au! BufRead,BufNewFile *.config setfiletype json 
+"au! BufRead,BufNewFile *.conf setfiletype json 
+"au! BufRead,BufNewFile *.config setfiletype json 
 
 au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
@@ -154,10 +154,10 @@ set shortmess-=S
 call plug#begin()
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'altercation/vim-colors-solarized'
+Plug 'https://codeberg.org/lifepillar/vim-solarized8'
 
 call plug#end()
 
 set background=dark
-colorscheme solarized
 "let g:solarized_termcolors=16
+colorscheme retrobox
