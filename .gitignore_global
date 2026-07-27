@@ -13,7 +13,9 @@ kr_test/
 KraphaelTest*
 
 # intellij
-.idea
+#.idea
+.idea/.name
 
 # claude
 .claude/worktrees/
+**/.claude/settings.local.json
