@@ -7,3 +7,4 @@
     * ideavimrc
     * tmux conf
     * gitignore global
+    * ripgrep conf

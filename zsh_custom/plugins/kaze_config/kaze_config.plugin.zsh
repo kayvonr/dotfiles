@@ -54,6 +54,9 @@ export HISTORY_IGNORE='(exit)'
 export TERM="screen-256color"
 alias tmux="tmux -2"
 
+### ripgrep config
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
+
 
 ### terminal word manipulation
 
