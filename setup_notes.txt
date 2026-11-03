@@ -8,3 +8,6 @@
     * tmux conf
     * gitignore global
     * ripgrep conf
+
+
+reminder on symlink syntax: ln -s ~/src/dotfiles/.ripgreprc ~/.ripgreprc # destination file, source file
